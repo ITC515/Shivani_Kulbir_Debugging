@@ -1,0 +1,16 @@
+Fred lost, balance now 80
+
+Turn 5: Fred bet 5 on CLUB
+Rolled DIAMOND, HEART, HEART
+Fred lost, balance now 75
+
+Turn 6: Fred bet 5 on CROWN
+Rolled DIAMOND, HEART, HEART
+Fred lost, balance now 70
+
+Turn 7: Fred bet 5 on DIAMOND
+Rolled DIAMOND, HEART, HEART
+Fred won 5, balance now 70
+//here is the error balance is Still $70 if layer win $5, it should be $75
+
+Start Game 0: 
