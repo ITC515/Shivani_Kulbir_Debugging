@@ -31,7 +31,7 @@ public class Game {
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
 		
 		player.takeBet(bet);
-		
+		//this code is creating the bug because this is running before win or loss
 		int matches = 0;
 		for ( Dice d : dice) {
 			d.roll();
