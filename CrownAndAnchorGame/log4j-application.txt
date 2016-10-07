@@ -1,0 +1,26 @@
+Fred lost, balance now 80
+
+Turn 5: Fred bet 5 on CLUB
+Rolled DIAMOND, HEART, HEART
+Fred lost, balance now 75
+
+Turn 6: Fred bet 5 on CROWN
+Rolled DIAMOND, HEART, HEART
+Fred lost, balance now 70
+
+Turn 7: Fred bet 5 on DIAMOND
+Rolled DIAMOND, HEART, HEART
+Fred won 5, balance now 70
+//first bug
+Start Game 0: 
+Fred starts with balance 5, limit 0
+Start Game 0: 
+Fred starts with balance 5, limit 0
+0 turns later.
+End Game 0: Fred now has balance 5
+
+Start Game 1: 
+Fred starts with balance 5, limit 0
+0 turns later.
+End Game 1: 
+//second bug
