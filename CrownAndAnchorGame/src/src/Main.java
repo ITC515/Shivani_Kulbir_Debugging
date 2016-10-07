@@ -1,10 +1,16 @@
 import java.util.List;
-import java.io.*;
 
+
+
+import java.io.*;
+import org.apache.log4j.Logger;
 public class Main {
+	//final static Logger Logger=org.apache.log4j.Logger.getLogger(Main.class);
+	
 	
 	public static void main(String[] args) throws Exception {
 		
+		//Logger.debug("Error in the code");
 	   BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
 
         Dice d1 = new Dice();
@@ -30,15 +36,19 @@ public class Main {
             	int limit = 0;
                 player = new Player(name, balance);
                 player.setLimit(limit);
+                
                 int bet = 5;
 
                 System.out.println(String.format("Start Game %d: ", i));
                 System.out.println(String.format("%s starts with balance %d, limit %d", 
                 		player.getName(), player.getBalance(), player.getLimit()));
-
+               
                 int turn = 0;
+              
                 while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
+                	
                 {
+                	
                     turn++;                    
                 	DiceValue pick = DiceValue.getRandom();
                    
@@ -46,21 +56,23 @@ public class Main {
                 			turn, player.getName(), bet, pick); 
                 	
                 	int winnings = game.playRound(player, pick, bet);
+                	
                     cdv = game.getDiceValues();
                     
                     System.out.printf("Rolled %s, %s, %s\n",
                     		cdv.get(0), cdv.get(1), cdv.get(2));
                     
                     if (winnings > 0) {
-	                    System.out.printf("%s won %d, balance now %d\n\n",
-	                    		player.getName(), winnings, player.getBalance());
+                    	System.out.printf("%s won %d, balance now %d\n\n",
+	                    	player.getName(), winnings, player.getBalance());
+                    	
 	                	winCount++; 
                     }
                     else {
 	                    System.out.printf("%s lost, balance now %d\n\n",
 	                    		player.getName(), player.getBalance());
 	                	loseCount++;
-                    }
+	                	}
                     
                 } //while
 
@@ -76,7 +88,7 @@ public class Main {
             String ans = console.readLine();
             if (ans.equals("q")) break;
         } //while true
-        
+         
         System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
 	}
 

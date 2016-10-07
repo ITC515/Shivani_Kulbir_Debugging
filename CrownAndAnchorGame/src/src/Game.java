@@ -25,12 +25,13 @@ public class Game {
 	}	
 	
 	public int playRound(Player player, DiceValue pick, int bet ) {		
+		
 		if (player == null) throw new IllegalArgumentException("Player cannot be null.");
 		if (pick == null) throw new IllegalArgumentException("Pick cannot be negative.");
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
 		
 		player.takeBet(bet);
-		    
+		  
 		int matches = 0;
 		for ( Dice d : dice) {
 			d.roll();
@@ -40,11 +41,15 @@ public class Game {
 		}
 		
 		int winnings = matches * bet;
+	
 
 		if (matches > 0) {			
 			player.receiveWinnings(winnings);
+			
 		}
+		
         return winnings;		
+        
 	}
 	
 }
