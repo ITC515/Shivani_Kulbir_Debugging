@@ -1,0 +1,23 @@
+2. UAT for second bug
+
+<2> - <PlayerBettingLimitTest>
+
+Description:
+
+The “PlayerBettingLimitTest” Test is about the bug which is occurring in the “player program” of the “CrownAndAnchorGame” project. The game quits, when player still have $5 to put on bet. The expected result of the bug is that the player should have $5 at end of the execution of the code (which should be zero, as the limit is set to zero).
+
+Pre-conditions: 
+•	Player must have balance
+•	Dices should be thrown
+•	Limit must be set
+•	Code must stop execution when player reaches at balance $5
+
+Post-conditions: 
+•	Player should have balance $5 remaining
+
+Data required:
+•	Player name and balance
+•	Limit of balance=0
+•	Dices thrown: if player lose or win
+
+

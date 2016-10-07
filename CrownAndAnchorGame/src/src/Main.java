@@ -46,7 +46,7 @@ public class Main {
                 int turn = 0;
               
                 while (player.balanceExceedsLimitBy(bet) && player.getBalance() < 200)
-                	
+                	//limit is checked in this condition 
                 {
                 	
                     turn++;                    

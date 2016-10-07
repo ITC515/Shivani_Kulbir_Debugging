@@ -1,0 +1,21 @@
+1. UAT for First bug
+Test case Name- PlayerBalanceTest 
+
+<1> - < PlayerBalanceTest >:
+
+Description: 
+
+Test PlayerBalanceTest describes that the balance of the player does not increase when player won bet of $5 for one time. Expected result should be same as previous if player wins one match (bet).
+
+Pre-conditions: 
+•	Player must exist
+•	Player must have balance
+•	Player must win the bet
+
+Post-conditions: 
+•	Balance of player does not increase at (it should increase if player wins’ bet, this is the bug)
+
+Data required:
+•	Payer name and balance
+•	Total bets won
+•	Dices thrown should be thrown to win the bet
