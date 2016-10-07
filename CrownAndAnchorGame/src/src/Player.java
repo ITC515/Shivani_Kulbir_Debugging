@@ -37,7 +37,8 @@ public class Player {
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
 		if (!balanceExceedsLimitBy(bet)) throw new IllegalArgumentException("Placing bet would go below limit.");
 		balance = balance - bet;
-	
+	//this method is created bug, even if player wins the balance is already reduced by 5 
+		//thats why in that output one win does not affect to the balance of the player
 		
 	}
 	
