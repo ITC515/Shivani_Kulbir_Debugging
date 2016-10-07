@@ -30,7 +30,8 @@ public class Player {
 	}
 	
 	public boolean balanceExceedsLimitBy(int amount) {
-		return (balance - amount > limit );
+		return (balance - amount >= limit );
+		//this is the corrected code for second error
 		//when balance is 5,amount is 5, and limit is 0, code does not work
 	}
 	
