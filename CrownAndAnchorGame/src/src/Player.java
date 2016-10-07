@@ -31,6 +31,7 @@ public class Player {
 	
 	public boolean balanceExceedsLimitBy(int amount) {
 		return (balance - amount > limit );
+		//when balance is 5,amount is 5, and limit is 0, code does not work
 	}
 	
 	public void takeBet(int bet) {
